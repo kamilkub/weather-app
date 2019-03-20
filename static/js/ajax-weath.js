@@ -1,6 +1,6 @@
 $('button').on('click', function() {
 
-  var apiKey = "16c12b13978a32ff973dc4312a2a7746";
+  var apiKey = "";
 
   var cityName = $('.cityName').val();
 
@@ -77,7 +77,7 @@ function sayDegress(city, numb, wind) {
 }
 
 
-// api key: 16c12b13978a32ff973dc4312a2a7746
+// api key: 
 
 // snowflake
 // sunny
