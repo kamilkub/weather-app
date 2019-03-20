@@ -5,19 +5,25 @@
   <meta charset="utf-8">
   <title>Weather App</title>
   <link rel="icon" href="/img/app.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.3/bowser.min.js"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+  <nav class="navbar navbar-dark bg-dark" style="text-align:left;">
+    <a href="/documentation">API Documentation</a>
+    <a href="/login">Get API Key</a>
+  </nav>
+
   <div class="contan">
 
     <div class="weather-container">
    <h1 class="center">Tylko angielskie nazwy miast!</h1>
       <div class="banner">
         <img src="/img/cloud.png" height="256" width="256" />
-        <h1 class="temperature center"><span style="border:1px solid black;" class="temp"></span>  <span style="margin-left:25px;border:1px solid black;"class="wind"></span> </h1>
+        <h1 class="temperature center"><span class="temp"></span> &degC <span style="margin-left:25px;border:1px solid black;"class="wind"></span> </h1>
         <h1 class="city center"></h1>
       </div>
 

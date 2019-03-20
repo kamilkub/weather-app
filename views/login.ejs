@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Get New Api Key!</title>
+  </head>
+  <body>
+
+<div class="contan">
+
+
+
+<div class="weather-container">
+
+<% if(valid) { %>
+
+  <h3 style="color:red;">You provided bad email! Try again</h3>
+
+<% } %>
+<h1 class="center">Sign for API Key</h1>
+<form action="/user/getApiKey/newApiKey" method="post">
+ <input type="email" name="email" placeholder="Email" required>
+ <button type="submit" name="button">Get Api Key!</button>
+</form>
+
+
+<div class="info">
+<a href="/" class="btn btn-danger btn-lg">Home</a>
+</div>
+
+
+  </div>
+</div>
+  </body>
+</html>
