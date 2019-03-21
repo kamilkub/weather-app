@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weather App</title>
   <link rel="icon" href="/img/app.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -20,17 +21,17 @@
   <div class="contan">
 
     <div class="weather-container">
-   <h1 class="center">Tylko angielskie nazwy miast!</h1>
+   <h1 class="center" style="text-align:center;">Tylko angielskie nazwy miast!</h1>
       <div class="banner">
         <img src="/img/cloud.png" height="256" width="256" />
         <h1 class="temperature center"><span class="temp"></span> &degC <span style="margin-left:25px;border:1px solid black;"class="wind"></span> </h1>
         <h1 class="city center"></h1>
       </div>
 
-      <div class="form-spot center">
-        <input type="text" class="cityName center" name="city" placeholder="Jaka pogoda jest w?" required>
+
+        <input type="text" class="cityName" name="city" placeholder="Jaka pogoda jest w?" required>
         <button class="role-button center">Sprawdź!</button>
-      </div>
+  
 
     </div>
 

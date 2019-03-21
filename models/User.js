@@ -30,7 +30,7 @@ module.exports.findByKey = function findByKey(key, callback){
          if(found){
            return callback(true);
          }else{
-           console.log(err);
+           return callback(false);
          }
 
     });

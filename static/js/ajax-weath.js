@@ -1,12 +1,10 @@
-$('button').on('click', function() {
-
-  var apiKey = "";
+﻿$('button').on('click', function() {
 
   var cityName = $('.cityName').val();
 
   if (cityName != null) {
 
-    $.get('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&&appid=' + apiKey, function(data, status) {
+    $.get('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&&appid=16c12b13978a32ff973dc4312a2a7746', function(data, status) {
 
 
       console.log(data);
@@ -20,6 +18,7 @@ $('button').on('click', function() {
         console.log(data.main.temp);
 
         var temp = Math.floor(data.main.temp - 273.15);
+        var wind = Math.floor(data.wind.speed*0.001*36/1*100);
 
         if (temp >= 15) {
           $('img').attr('src', '/img/sun.png');
@@ -29,11 +28,11 @@ $('button').on('click', function() {
         }
         $('.temperature').css('display', 'block');
         $('.temp').text(temp);
-        $('.wind').text(data.wind.speed+" km/h");
+        $('.wind').text(wind+" km/h");
         $('.city').text(cityName.toUpperCase());
         $('.cityName').val("");
 
-        sayDegress(cityName, temp, data.wind.speed);
+        sayDegress(cityName, temp, wind);
 
       } else {
 
@@ -64,10 +63,10 @@ function sayDegress(city, numb, wind) {
     msg.lang = "en-US";
   } else if (bowser.name === "Chrome") {
     msg.lang = "pl-PL";
-    msg.text = "W " + city + "ie" + " jest " + numb + " stopni i wiatr o prędkości "+wind+" kilometra na godzinę";
+    msg.text = "W " + city + "ie" + " jest " + numb + " stopni i wiatr o prędkości "+wind+" kilometrów na godzinę";
   } else if (bowser.name === "Opera") {
     msg.lang = "pl-PL";
-    msg.text = "W " + city + "ie" + " jest " + numb + " stopni i wiatr o prędkości "+wind+" kilometra na godzinę";
+    msg.text = "W " + city + "ie" + " jest " + numb + " stopni i wiatr o prędkości "+wind+" kilometrów na godzinę";
   }
 
 
@@ -76,8 +75,6 @@ function sayDegress(city, numb, wind) {
 
 }
 
-
-// api key: 
 
 // snowflake
 // sunny

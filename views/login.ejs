@@ -20,7 +20,7 @@
 
 <% } %>
 <h1 class="center">Sign for API Key</h1>
-<form action="/user/getApiKey/newApiKey" method="post">
+<form action="/user/getApiKey/newApiKey" method="POST">
  <input type="email" name="email" placeholder="Email" required>
  <button type="submit" name="button">Get Api Key!</button>
 </form>
@@ -33,5 +33,14 @@
 
   </div>
 </div>
+
+<script>
+setTimeout(function(){
+
+   document.querySelector('h3').style.display = "none";
+
+}, 3000);
+
+</script>
   </body>
 </html>

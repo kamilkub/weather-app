@@ -33,37 +33,55 @@ body {
   height: 500px;
 }
 
-.form-spot {
-  position: relative;
-  margin: auto;
-  padding-top: 7%;
-  padding-left: 14%;
-}
-
-.form-spot>input {
+input[type=text]{
   text-align: center;
-  display: block;
-  border-radius: 5px;
-  font-size: 25px;
-  border: none;
-  height: 50px;
-  width: 250px;
-  color: black;
-}
-
-.form-spot>button {
-  background:red;
   border:none;
-  text-align: center;
-  display: block;
-  margin-top: 5%;
-  margin-left: 8%;
-  width: 200px;
-  height: 50px;
-  font-size: 20px;
+  border-radius:10px;
+  height:50px;
+  font-family: 'Baloo Chettan', cursive;
+
+}
+
+button {
+   margin-top:5%;
+   background:red;
+   border:none;
+   border-radius:10px;
+   text-align:center;
 }
 
 .info {
      margin-top:100%;
 
+}
+
+@media only screen and (max-width:1200px){
+
+   .contan{
+     width:70%;
+   }
+   .weather-container{
+     margin-left:32%;
+   }
+   .center{
+     font-size:35px;
+   }
+   button{
+     margin-left:15%;
+   }
+   .city{
+     font-size:20px;
+   }
+   .temperature{
+     font-size:20px;
+
+   }
+}
+
+
+.api{
+  font-size:20px;
+  color:white;
+  font-family: 'Baloo Chettan', cursive;
+  text-align: left;
 }
