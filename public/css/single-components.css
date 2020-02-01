@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+ul {
+    padding-top: 20%;
+    width: 100%;
+}
+
+.li-component {
+    vertical-align: middle;
+    text-align: center;
+    margin-left: -40px;
+    list-style-type: none;
+    color: white;
+    font-size: 170%;
+    font-family: 'Teko', sans-serif;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+}
+
+.li-component:hover {
+    background: #071A39;
+}
+
+.topper-sidebar {
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-image {
+    border-radius: 120px;
+    padding-top: 10%;
+}
+
+.topper-h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 250%;
+    color: white;
+}
+
+.side-href {
+    text-decoration: none;
+    color: white;
+}
+
+.weather-button {
+    border: none;
+    width: 45%;
+    font-family: 'Teko', sans-serif;
+    font-size: 200%;
+    border-radius: 5px;
+}
+
+.weather-button:active {
+    background: red;
+}
+
+.form-container-one {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.weather-inputs {
+    font-family: 'Teko', sans-serif;
+    border: none;
+    background: none;
+    letter-spacing: 2px;
+    border-bottom: 3px solid grey;
+    margin: 1% auto 15% auto;
+    width: 50%;
+    height: 15px;
+    padding: 2%;
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: 200%;
+}
+
+.weather-inputs:focus {
+    outline: none;
+    border-image: linear-gradient(to right, #F96A2D, #390BFE);
+    border-image-slice: 1;
+}

@@ -1,0 +1,23 @@
+.content {
+    height: 600px;
+    width: 50%;
+    margin: 10% auto;
+    background: #172D51;
+    -webkit-box-shadow: -1px 3px 39px 10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 3px 39px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 3px 39px 10px rgba(0, 0, 0, 0.75);
+}
+
+.sidebar {
+    height: 600px;
+    width: 20%;
+    border-right: 1px solid black;
+    float: left;
+}
+
+.main-content {
+    height: 600px;
+    width: 79%;
+    float: right;
+    position: relative;
+}
