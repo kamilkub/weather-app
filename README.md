@@ -1,3 +1,14 @@
+# Application Rebuilt
+Rebuilt from Express.js to React
+
+## Main reasons
+### Single-Page Application
+### More flexible
+### Reusable Components
+
+#### Application still needs some improvements which will be done in a bit
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
