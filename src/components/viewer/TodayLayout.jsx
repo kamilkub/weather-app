@@ -1,13 +1,69 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import IconComponent from '../main/IconComponent';
+import Description from '../main/Description';
+
 
 export default function TodayLayout(props) {
 
-    console.log(props.data);
-    return (
+    
+    let parameter = props.location.search;
+    let city = parameter.substring(parameter.indexOf("=")+1, parameter.length);
+    const [weatherInfo, setInfo] = useState([]);
+    const [isLoaded, setLoaded] = useState(false);
+    const [cityName, setCityName] = useState('');
+    const [description, setDescription] = useState([]);
+
+    
+
+    useEffect(() => {
+        if(city !==  undefined && city !== ''){
+            
+        axios.get('http://api.openweathermap.org/data/2.5/weather?q=' +city+ '&appid=16c12b13978a32ff973dc4312a2a7746')
+        .then(function (response){
+           
+                const {data} = response;
+                const {main} = data;
+                const {wind} = data;
+                const {clouds} = data;
+                const {weather} = data;
+
+                const dataRender = [
+                    { image: "wind_64.png", data: wind.speed+" m/s" },
+                    { image: "degrees_64.png", data: Math.round(main.temp-273.15)+' \u00b0C'},
+                    { image: "cloud_64.png", data: clouds.all+" %"}
+                ];
+
+                setDescription(weather[0]);
+                setCityName(city);
+                setInfo(dataRender);
+                setLoaded(true);
+                
         
-        <h1>TodayLayout</h1>
-    )
+            }).catch(function (error){ 
+                setCityName("No such a town found");
+                setLoaded(true);
+            console.log(error);
+        });    
+    }
+}, []);
+
+
+    return ( <div className="main-content">
+                    <div className="top-content">
+                            <img src="./images/icons/town_128.png" />
+                            <h1>{isLoaded ? cityName : "Just tap search and specify town!"}</h1>
+                    </div>
+                    <div className="icon-container">
+                        {isLoaded ? weatherInfo.map((element, index) => <IconComponent key={index} src={element.image} data={element.data} /> ) : null }
+                    </div>
+
+                    <Description desc={description.description} />
+                    
+            </div>)
 }
+
+
 
 
 

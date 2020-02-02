@@ -7,36 +7,20 @@ import { BrowserRouter as Router , Switch, Route } from 'react-router-dom';
 
 export default function App() {
 
-    const [weatherData, setWeatherData] = React.useState();
-    const [isDataSet, setTo] = React.useState(false);
-
- 
-
-    function changeWeatherData(childData) {
-        setWeatherData(childData);
-        setTo(true);
-    }
-
-
-
-    return (
-<Router>
-    <div className="content">
-        <SideBar isAvailable={isDataSet} />
-        <Switch>
-           <Route exact path="/">
-           <BasicLayout callBackMethod={changeWeatherData} />
-           </Route>
-           <Route path="/today">
-           <TodayLayout data={weatherData} />
-           </Route>
-           <Route path="/five-day">
-           <FiveDayLayout data={weatherData} />
-           </Route>
+return (
+        <Router>
+            <div className="content">
+                <SideBar />
+            <Switch>
+                <Route exact path="/">
+                    <BasicLayout />
+                </Route>
+                <Route path="/today" name="todayLayout" component={TodayLayout} />
+                <Route path="/five-day">
+                    <FiveDayLayout />
+                </Route>
            </Switch>
-    </div>
-</Router>
-   
-    );
+            </div>
+        </Router>);
 
 }

@@ -1,1 +1,37 @@
-/* VIEW_PORT_WIDTH = 1020 - under this view needs responsive design
+            /* VIEW_PORT_WIDTH = 1020 - under this view needs responsive design */
+            
+            @media only screen and (max-width: 1000px) {
+                .content {
+                    width: 70%;
+                }
+            }
+            
+            @media only screen and (max-width: 700px) {
+                .content {
+                    width: 100%;
+                }
+            }
+            
+            @media only screen and (max-width: 500px) {
+                .content {
+                    height: 1200px;
+                }
+                .main-content {
+                    width: 100%;
+                    height: 1200px;
+                }
+                .sidebar {
+                    width: 100%;
+                    border: none;
+                    height: 500px;
+                }
+                .topper-sidebar {
+                    width: 100%;
+                }
+                .clock-place {
+                    height: 250px;
+                }
+                .form-container-one {
+                    height: 250px;
+                }
+            }

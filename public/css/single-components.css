@@ -70,7 +70,7 @@ ul {
     border: none;
     background: none;
     letter-spacing: 2px;
-    border-bottom: 3px solid grey;
+    border-bottom: 5px solid grey;
     margin: 1% auto 15% auto;
     width: 50%;
     height: 15px;
@@ -85,4 +85,27 @@ ul {
     outline: none;
     border-image: linear-gradient(to right, #F96A2D, #390BFE);
     border-image-slice: 1;
+}
+
+.icon-delay {
+    text-align: center;
+    display: inline-block;
+    width: 33%;
+    margin-top: 2%;
+    color: white;
+    font-size: 150%;
+    /* padding: 2% 5% 5% 2%; */
+}
+
+.description {
+    font-family: 'Teko', sans-serif;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    color: white;
+}
+
+.description p {
+    font-size: 200%;
+    margin: 0;
 }

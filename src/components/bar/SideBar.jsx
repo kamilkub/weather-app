@@ -4,8 +4,6 @@ import TopHeader from './TopHeader';
 
 export default function SideBar(props) {
 
-    console.log(props.isAvailable);
-
     return (
      
         <div className="sidebar">
