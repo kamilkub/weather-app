@@ -1,5 +1,5 @@
 # Application Rebuilt
-Simple weather app which shows currently broadcast for a current day. <br>
+Simple weather app which shows broadcast for a current day. <br>
 Rebuilt from Express.js to React
 
 ## Advantages
