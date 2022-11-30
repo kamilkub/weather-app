@@ -12,21 +12,24 @@ export default function Clock() {
 
 
     setTimeout(() => {
-        setHours(new Date().getHours());
-        setMinutes(new Date().getMinutes());
-        setSeconds(new Date().getSeconds());
+        const date = new Date();
+        setHours(date.getHours());
+        setMinutes(date.getMinutes());
+        setSeconds(date.getSeconds());
    }, 1000);
    
     function changeImageState() {
-        var image = new Date().getHours() > 6 && new Date().getHours() < 18 ?  imageUrl+'morning_128.png' : imageUrl+'night_124.png';
+        const date = new Date();
+        const image = date.getHours() > 6 && date.getHours() < 18 ?  imageUrl + 'morning_128.png' : imageUrl + 'night_124.png';
         setImage(image);
     }
 
     useEffect(() => {
         changeImageState();
-        setHours(new Date().getHours());
-        setMinutes(new Date().getMinutes());
-        setSeconds(new Date().getSeconds());
+        const date = new Date();
+        setHours(date.getHours());
+        setMinutes(date.getMinutes());
+        setSeconds(date.getSeconds());
    }, []);
 
     
